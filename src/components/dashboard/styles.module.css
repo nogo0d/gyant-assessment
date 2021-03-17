@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.submitButton {
+    align-self: flex-end;
+}
+
+.doneMessageContainer {
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.doneMessage {
+    text-align:center;
+}
+
+.resetButton {
+   margin-top: 30px;
+}
+
+.loadingIndicator {
+    margin: auto;
+}

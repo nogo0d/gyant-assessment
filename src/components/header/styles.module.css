@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.emptyMessage {
+	width: 100%;
+	text-align: center;
+}
+
+.welcomeMessage {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: solid 1px #000;
+}

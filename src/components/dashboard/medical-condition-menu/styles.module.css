@@ -1,0 +1,26 @@
+.container {
+    flex: 0 0 auto;
+    max-width: 25%;
+    width: 100%;
+}
+
+.conditionItem {
+    display: flex;
+    align-items: center;
+}
+
+.conditionItemLabel {
+    display: inline;
+    font-size: 14px;
+}
+
+.searchInput {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.wrapperList {
+    margin-top: 10px;
+    height: 470px;
+    overflow: auto;
+}

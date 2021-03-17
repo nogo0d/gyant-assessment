@@ -1,0 +1,113 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "unused-imports"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports-ts": "error",
+    "unused-imports/no-unused-vars-ts": [
+    "warn",
+    { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "no-irregular-whitespace": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "util",
+            "message": "This is NodeJS library, don't use it"
+          },
+          {
+            "name": "path",
+            "message": "This is NodeJS library, don't use it"
+          }
+        ],
+        "patterns": [
+          "fp-ts/es6/*"
+        ]
+      }
+    ],
+    "no-debugger": "warn",
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "id-blacklist": [
+      "error",
+      "x"
+    ],
+    "no-restricted-globals": [
+      "error",
+      "name",
+      "toString",
+      "pending"
+    ],
+    "prefer-template": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-prototype-builtins": "off",
+    "import/order": ["error", {
+      "pathGroups": [
+        {
+          "pattern": "**/*.+(css|sass|less|scss|pcss|styl)",
+          "patternOptions": {"dot": true, "nocomment": true},
+          "group": "unknown",
+          "position": "after"
+        },
+        {
+          "pattern": "{.,..}/**/*.+(css|sass|less|scss|pcss|styl)",
+          "patternOptions": {"dot": true, "nocomment": true},
+          "group": "unknown",
+          "position": "after"
+        }
+      ]
+    }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}
